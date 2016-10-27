@@ -63,6 +63,11 @@ html {
      max-width: 64rem;
  }
 
+.container.narrow{
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
 @media (min-width: 640px) {
     html { font-size: 112%; }
     
