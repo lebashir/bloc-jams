@@ -79,18 +79,13 @@ var images = document.getElementsByClassName('album-cover-art')[0];
      setCurrentAlbum(albumPicasso);
      
      var albums = [albumMarconi, albumVanGogh, albumPicasso];
-     var albumRotation =0;
+     var Rotation =0;
      
      images.addEventListener('click', function(event){
         setCurrentAlbum(albums[albumRotation]);
-        albumRotation++;
-         if (albumRotation == albums.length){
-            albumRotation = 0; 
+        Rotation++;
+         if (Rotation == albums.length){
+            Rotation = 0; 
          }
-     }
-                            
-                            
-    
-                            )
-     
+     }); 
  };
