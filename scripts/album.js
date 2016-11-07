@@ -28,6 +28,21 @@ var albumPicasso = {
      ]
  };
 
+var albumVanGogh = {
+     title: 'The Starry Night',
+     artist: 'Vincent Van Gogh',
+     label: 'Post-impressinism',
+     year: '1889',
+     albumArtUrl: 'assets/images/album_covers/04.png',
+     songs: [
+         { title: 'The asylum', duration: '9:41' },
+         { title: 'The Painting', duration: '3:29' },
+         { title: 'Interpretations', duration: '2:41'},
+         { title: 'Provenance', duration: '7:17' },
+         { title: 'Materials', duration: '1:35'}
+     ]
+ };
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -39,9 +54,9 @@ var createSongRow = function(songNumber, songName, songLength) {
  
      return template;
  };
-
+     
  var setCurrentAlbum = function(album) {
-  
+     
      var albumTitle = document.getElementsByClassName('album-view-title')[0];
      var albumArtist = document.getElementsByClassName('album-view-artist')[0];
      var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
@@ -59,7 +74,23 @@ var createSongRow = function(songNumber, songName, songLength) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
  };
- 
+var images = document.getElementsByClassName('album-cover-art')[0];
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     
+     var albums = [albumMarconi, albumVanGogh, albumPicasso];
+     var albumRotation =0;
+     
+     images.addEventListener('click', function(event){
+        setCurrentAlbum(albums[albumRotation]);
+        albumRotation++;
+         if (albumRotation == albums.length){
+            albumRotation = 0; 
+         }
+     }
+                            
+                            
+    
+                            )
+     
  };
