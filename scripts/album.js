@@ -59,12 +59,7 @@ var createSongRow = function(songNumber, songName, songLength) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
  };
-
- window.onload = function() {
-     
-     setCurrentAlbum(albumPicasso);   
-    
- };
-     
-
  
+ window.onload = function() {
+     setCurrentAlbum(albumPicasso);
+ };
