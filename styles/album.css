@@ -43,9 +43,9 @@ album-cover-art {
     border-collapse: collapse;
 }
 
-album-view-song-item {
+.album-view-song-item {
     height: 3rem;
-    border-bottom: 1px solid rgba(255,255m,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
 .song-item-number {
