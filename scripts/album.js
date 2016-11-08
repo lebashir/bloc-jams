@@ -60,6 +60,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      }
  };
  
+
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
  };
