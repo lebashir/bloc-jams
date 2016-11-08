@@ -60,6 +60,7 @@
      width: 5%;
  }
 
+<<<<<<< HEAD
 .album-song-button {
      text-align: center;
      font-size: 14px;
@@ -80,6 +81,24 @@
  .album-song-button span {
      line-height: 28px;
  }
+=======
+.album-view-song-item {
+    height: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.song-item-number {
+    width: 5%;
+}
+
+.song-item-title {
+    width: 85%;
+}
+
+.song-item-duration {
+    width: 5%;
+}
+>>>>>>> checkpoint-11-albumview
 
 @media (max-width: 640px) and (min-width: 320px) {
     .album-view-details {
