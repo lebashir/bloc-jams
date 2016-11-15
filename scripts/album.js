@@ -115,7 +115,7 @@ var findParentByClassName = function(element, parentClass){
             elementParent = elementParent.parentElement;
        
         }
-        return elementParent;// for the assignment would add an if statement before the while loop which if elementParent.className === null alert...
+        return elementParent;
         
     }
 };
