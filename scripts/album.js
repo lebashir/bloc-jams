@@ -56,6 +56,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      $albumSongList.empty();
  
      for (var i = 0; i < album.songs.length; i++) {
+         
          var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
          $albumSongList.append($newRow);
      }
