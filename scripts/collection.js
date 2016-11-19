@@ -1,4 +1,4 @@
- var buildcollectionItemTemplate = function(){
+ var buildCollectionItemTemplate = function(){
      
      var template =
      '<div class="collection-album-container column fourth">'
@@ -24,7 +24,7 @@ $(window).load(function(){
     
     for (Var i=0; i<12; i++){
         
-        var $newThumbnail = buildCollectionTemplate();
+        var $newThumbnail = buildCollectionItemTemplate();
         $collectionContainer.append($newThumbnail);
     }
 });
