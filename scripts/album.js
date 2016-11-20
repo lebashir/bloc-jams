@@ -75,7 +75,21 @@ var createSongRow = function(songNumber, songName, songLength) {
     };
     
     $row.find('.song-item-number').click(clickHandler);
-    $row.hover(onHover, offHover);
+    $row.hover(function(event) {
+        var songNumberCell = $(this).find('.song-item-number');
+        var songNumber = songNumberCell.attr('data-song-number');
+
+        if (songNumber !== currentlyPlayingSong) {
+            songNumberCell.html(playButtonTemplate);
+        }
+    }, function(event) {
+        var songNumberCell = $(this).find('.song-item-number');
+        var songNumber = songNumberCell.attr('data-song-number');
+
+        if (songNumber !== currentlyPlayingSong) {
+            songNumberCell.html(songNumber);
+        }
+    });
     return $row;
  };
 
