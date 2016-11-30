@@ -165,7 +165,8 @@ var nextSong = function(){
         if (currentSongIndex >= currentAlbum.songs.length){
             currentSongIndex = 0;
         }
-   setSong(currentSongIndex -1);
+    console.log(currentSongIndex - 1);
+   setSong(currentSongIndex +1);
    currentSoundFile.play();
    updatePlayerBarSong(); //this was missing
     
