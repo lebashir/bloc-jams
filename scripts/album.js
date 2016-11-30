@@ -149,13 +149,14 @@ var updatePlayerBarSong = function(){
  $(document).ready(function(){
      
      setCurrentAlbum(albumPicasso);
-     $previousButton.click(previousSong);
-     $nextButton.click(nextSong);
+     $previousButton.click(toggleSong('previous'));
+     $nextButton.click(toggleSong('next'));
      
    
  });
+var toggleSong = function(direction){
 
-var nextSong = function(){
+    if (direction === 'next'){
     
     var getLastSongNumber = function(index){
         return index == 0 ? currentAlbum.songs.length : index;
@@ -182,10 +183,8 @@ var nextSong = function(){
     $nextSongNumberCell.html(pauseButtonTemplate);
     $lastSongNumberCell.html(lastSongNumber);
     
-};
-
-var previousSong = function() {
-    
+} else if (direction ==='previous'){
+ 
     var getLastSongNumber = function(index) {
         return index == (currentAlbum.songs.length - 1) ? 1 : index + 2;
     };
@@ -215,5 +214,5 @@ var previousSong = function() {
     
 };
 
-
+};
 
