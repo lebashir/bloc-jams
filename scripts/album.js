@@ -216,14 +216,22 @@ var previousSong = function() {
 };
 
 var togglePlayFromPlayerBar = function(){
-    if ($(this).html() === playerBarPlayButton ){
-        
-       $('.song-item-number').html(pauseButtonTemplate);
+    
+   var currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
+    
+    if (currentSoundFile === null ){
+        setSong(1);
+        currentSoundFile.play();
+        updatePlayerBarSong();
        $(this).html(playerBarPauseButton);
-        currentSoundFIle.play();
+        currentlyPlayingCell.html(pauseButtonTemplate);
         
+    } else if (currentSoundFile.isPaused()){
+        currentlyPlayingCell.html(pauseButtonTemplate);
+        $(this).html(playerBarPauseButton);
+        currentSoundFile.play();
     } else {
-        $('.song-item-number').html(playButtonTemplate);
+        currentlyPlayingCell.html(playButtonTemplate);
         $(this).html(playerBarPlayButton);
         currentSoundFile.pause();
     }
