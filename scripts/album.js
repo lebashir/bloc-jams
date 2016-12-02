@@ -155,7 +155,10 @@ var setupSeekBars = function (){
     
 };
 
-
+var setCurrentTimeInPlayerBar = function (currentTime){
+    currentTime = currentSoundFile.getTime();
+    $('.player-bar .current-time').html(currentTime);
+}
 
 
 
